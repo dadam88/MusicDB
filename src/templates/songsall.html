@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+
+<table class="table table-striped">
+	<thead>
+		<tr>
+			<th>Title</th>
+			<th>Level</th>
+			<th>Period</th>
+		</tr>
+	</thead>
+	<tbody>
+		{% for song in songs %}
+		<tr>
+			<td>  <a href="/songs/{{ song.slug }}/"> {{ song }} </a> </td>
+			<td> {{ song.level}}		</td>
+			<td> {{ song.period }}		</td>
+		</tr>
+		{% endfor %}
+
+	</tbody>
+</table>
+{% endblock %}
+
